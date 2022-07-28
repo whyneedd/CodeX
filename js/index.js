@@ -19,7 +19,7 @@ const loading = () => {
     var loadshow;
 
     function pageshow() {
-        loadshow = setTimeout(loadf, 10)
+        loadshow = setTimeout(loadf, 12000)
     }
 
     function loadf() {
