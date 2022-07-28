@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+*::selection {
+    background: rgb(0, 0, 0);
+    color: white;
+}
+
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+:root {
+    /* Text Color */
+    --clr-primary: rgb(255, 255, 255);
+    --clr-second: rgb(97, 125, 255);
+
+    /* Background Color */
+    --bg-1: rgb(31, 31, 32);
+    --bg-2: rgb(41, 42, 41);
+
+    /* Z index */
+    --z-index-n: 100;
+    --z-index-m: 200;
+    --z-index-u: 300;
+
+    /* Size */
+    --size-f1: 1.5em;
+    --size-f2: 2em;
+
+    /* Font */
+    --font: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font);
+    background-color: var(--bg-2);
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+h1,
+h2,
+p {
+    color: var(--clr-primary);
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.section__title {
+    position: relative;
+    display: flex;
+    font-size: var(--size-f2);
+    color: var(--clr-primary);
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.section__title::after {
+    content: "";
+    position: absolute;
+    top: 2.7rem;
+    display: block;
+    width: 120px;
+    height: 4px;
+    border-radius: .5rem;
+    margin: 0 auto;
+    background-color: var(--clr-second);
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+    padding: 15px 0;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: var(--z-index-n);
+    padding: 10px 0;
+}
+
+.header::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -100%;
+    opacity: 0;
+    z-index: -1;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: var(--clr-second);
+    box-shadow: 0 2px 15px rgb(0, 0, 0, .34);
+    transition: top .5s, opacity .5s;
+}
+
+.header.active__Nav::before {
+    content: "";
+    top: 0px;
+    opacity: 1;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    position: relative;
+    display: flex;
+    font-weight: 700;
+    font-size: var(--size-f2);
+    color: var(--clr-primary);
+}
+
+.navbar .navbar-items {
+    display: inline-block;
+    margin-left: var(--size-f1);
+}
+
+.navbar .navbar-items .navbar__links {
+    display: block;
+    font-size: 18px;
+    font-weight: 550;
+    color: var(--clr-primary);
+}
+
+.content {
+    position: absolute;
+    display: block;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+
+    transition: all .5s;
+
+}
+
+.content .container {
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content .desc h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.content .desc {
+    text-align: center;
+    width: 450px;
+    color: var(--clr-primary);
+}
+
+.content .desc .btn {
+    position: absolute;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 45px;
+    border-radius: .5em;
+    margin-top: 1em;
+    background-color: var(--clr-second);
+    color: var(--clr-primary);
+}
+
+.section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#About .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+#About p {
+    text-align: center;
+}
+
+.row-l {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.row-serv {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 50px;
+}
+
+.stats-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: .86rem;
+    width: 350px;
+    height: 380px;
+    z-index: 2;
+    padding: 1rem;
+    background-color: var(--bg-2);
+    border: 1px solid rgb(97, 125, 255, .76);
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+.btn__t  {
+    display: block;
+    padding: 10px 50px;
+    border-radius: .50rem;
+    color: var(--clr-primary);
+    background-color: var(--clr-second);
+    transition: background-color .5s;
+}
+
+.stats-card::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 0%;
+    z-index: -1;
+    transition: height .5s;
+    background-color: rgb(97, 125, 255);
+}
+
+.stats-card:hover::before {
+    height: 100%;
+}
+
+.stats-card:hover > .btn__t {
+    background-color: var(--bg-1);
+}
+
+.ffo {
+    width: 100%;
+    height: 70vh;
+    position: relative;
+}
+
+.footer {
+    position: relative;
+    padding: 70px 0;
+    background: var(--clr-second);
+}
+
+.foot {
+    max-width: 1150px;
+    margin: auto;
+}
+
+
+.container-fotter {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.fotter-card {
+    width: 25%;
+    padding: 15px 0;
+}
+
+.fotter-card h2 {
+    position: relative;
+    margin-bottom: 23px;
+}
+
+.fotter-card h2::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 70px;
+    height: 3px;
+    border-radius: .87rem;
+    background-color: red;
+}
+
+.fotter-card ul li a {
+    display: block;
+    color: rgb(204, 204, 204);
+    transition: color .3s;
+}
+
+.fotter-card li a:hover {
+    color: var(--clr-primary);
+}
+
+.copyright {
+    position: absolute;
+    display: block;
+    bottom: .45rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media screen and (max-width: 1150px) {
+    .navbar .navbar-items {
+        display: none;
+    }
+
+    .logo {
+        left: 2.5rem;
+    }
+
+    .stats-card {
+        width: 270px;
+    }
+
+    .stats-card p {
+        width: 40px;
+    }
+
+    .content .desc {
+        width: 280px;
+    }
+
+    .container-fotter {
+        align-items: center;
+        flex-direction: column;
+    }
+    .humbger {
+        position: absolute;
+        display: block;
+        top: 1.5rem;
+        right: 2.5rem;
+        width: 35px;
+        height: 35px;
+
+        outline: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .humbger .bar, .humbger::before, .humbger::after {
+        content: "";
+        display: block;
+        width: 100%;
+        margin: .56rem;
+        height: 3.7px;
+        border-radius: 1rem;
+        background-color: var(--clr-primary);
+
+    }
+}
