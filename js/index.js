@@ -12,12 +12,19 @@ const js_header = () => {
 }
 js_header();
 
-var username = "Name";
-var nbrmember = "120k";
 
-function Test() {
-    document.querySelectorAll(".desc-serv").innerHTML = `${username}, ${nbrmember}`;
+const loading = () => {
+    var loadshow;
+
+    function pageshow() {
+        loadshow = setTimeout(loadf, 12000)
+    }
+
+    function loadf() {
+        document.querySelector(".l-main").style.display = "block";
+        document.querySelector(".l-loading").style.display = "none";
+    }
 }
-Test();
+
 
 
