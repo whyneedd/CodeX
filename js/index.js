@@ -24,7 +24,9 @@ const loading = () => {
         document.querySelector(".l-main").style.display = "block";
         document.querySelector(".l-loading").style.display = "none";
     }
+    window.addEventListener("load", pageshow)
 }
+loading();
 
 
 
