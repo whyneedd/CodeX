@@ -335,12 +335,24 @@ p {
     background-color: red;
 }
 
-.fotter-card ul li a {
+.fotter-card .items-ffot {
+    display: inline-flex;
+}
+
+.fotter-card .items-ffot li {
+    margin-left: .56rem;
+}
+
+.fotter-card li a {
     display: block;
     color: rgb(204, 204, 204);
     transition: color .3s;
 }
 
+.fotter-card li a i {
+    color: white;
+    font-size: 23px;
+}
 .fotter-card li a:hover {
     color: var(--clr-primary);
 }
