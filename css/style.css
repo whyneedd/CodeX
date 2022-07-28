@@ -1,5 +1,7 @@
+/* ===== Google Font ===== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
 
+/* ===== Base ===== */
 * {
     margin: 0;
     padding: 0;
@@ -59,6 +61,8 @@ p {
     color: var(--clr-primary);
 }
 
+/* ===== Hero ===== */
+
 .hero {
     width: 100%;
     height: 100vh;
@@ -85,6 +89,8 @@ p {
     margin: 0 auto;
     background-color: var(--clr-second);
 }
+
+/* ===== Header ===== */
 
 .container {
     max-width: 1170px;
@@ -148,6 +154,17 @@ p {
     color: var(--clr-primary);
 }
 
+.navbar .navbar-items .navbar__links.active::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: .98rem;
+    background-color: red;
+}
+
+/* ===== Content ===== */
+
 .content {
     position: absolute;
     display: block;
@@ -195,6 +212,8 @@ p {
     padding-top: 100px;
     padding-bottom: 100px;
 }
+
+/* ===== About ===== */
 
 #About .container {
     position: relative;
@@ -271,6 +290,8 @@ p {
     background-color: var(--bg-1);
 }
 
+/* ===== Footer ===== */
+
 .ffo {
     width: 100%;
     height: 70vh;
@@ -332,6 +353,7 @@ p {
     transform: translateX(-50%);
 }
 
+/* ===== Mobile ===== */
 .humbger {
     display: none;
 }
@@ -440,6 +462,7 @@ p {
 
 
 
+/* ===== Loading ===== */
 
 .l-main {
     display: none;
