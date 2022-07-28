@@ -1,6 +1,8 @@
-const Header = document.querySelector(".js-header");
 
+// Navigation event scroll
 const js_header = () => {
+    var Header = document.querySelector(".js-header");
+
     window.addEventListener("scroll", function () {
         if (this.scrollY > 0) {
             Header.classList.add("active__Nav");
@@ -12,7 +14,7 @@ const js_header = () => {
 }
 js_header();
 
-
+// Page loading
 const loading = () => {
     var loadshow;
 
@@ -29,7 +31,7 @@ const loading = () => {
 loading();
 
 
-
+// Menu Toggle 
 const menu__toggle = () => {
     var humbger__btn = document.querySelector(".humbger");
     var humbger__menu = document.querySelector(".humbger__menu");
