@@ -335,6 +335,9 @@ p {
 .humbger {
     display: none;
 }
+.humbger__menu {
+    display: none;
+}
 
 @media screen and (max-width: 1150px) {
     .navbar .navbar-items {
